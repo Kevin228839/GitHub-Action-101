@@ -4,6 +4,10 @@ jobs:
   Explore-Github-Action:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is first echo!"
-        name: run1
-      - run: echo "This is second echo!"
+      - run: echo "job1 step1"
+      - run: echo "job1 step2"
+  Explore-Github-Action2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "job2 step1"
+      - run: echo "job2 step2"
