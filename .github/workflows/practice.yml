@@ -1,0 +1,8 @@
+name: practice-github-action
+on: [push]
+jobs:
+  Explore-Github-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is first echo!"
+      - run: echo "This is second echo!"
