@@ -10,4 +10,4 @@ jobs:
           HOSTNAME: ${{ secrets.SSH_HOST }}
           USER_NAME: ${{ secrets.SSH_USER }}
         run: |
-          echo "$USER_NAME"
+          echo "$USER_HOST"
