@@ -9,4 +9,4 @@ jobs:
           PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           HOSTNAME: ${{ secrets.SSH_HOST }}
           USER_NAME: ${{ secrets.SSH_USER }}
-        run: echo "$PRIVATE_KEY, $HOSTNAME, $USER_NAME"
+        run: echo "$USER_NAME"
