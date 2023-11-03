@@ -1,13 +1,12 @@
 name: practice-github-action
 on: [ push ]
 jobs:
-  Explore-Github-Action:
+  Deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "job1 step1"
-      - run: echo "job1 step2"
-  Explore-Github-Action2:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "job2 step1"
-      - run: echo "job2 step2"
+      - name: ssh testing
+        env:
+          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HOSTNAME: ${{ secrets.SSH_HOST }}
+          USER_NAME: ${{ secrets.SSH_USER }}
+        run: echo "$PRIVATE_KEY, $HOSTNAME, $USER_NAME"
