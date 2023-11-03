@@ -10,8 +10,6 @@ jobs:
           HOSTNAME: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USER }}
         run: |
-          echo "$PRIVATE_KEY" > private_key && chmod 400 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ${USERNAME}@${HOSTNAME}
-          cd ~
-          touch 123
+          echo "$PRIVATE_KEY" > private_key && chmod 400 ./private_key
+          ssh -o StrictHostKeyChecking=no -i ./private_key ${USERNAME}@${HOSTNAME}
 
